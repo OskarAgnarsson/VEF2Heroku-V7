@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Verkefni 6</title>
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
 </head>
 <body>
 	<h2>Nýskráning</h2>
@@ -31,6 +32,7 @@
 	<br>
 	________________________________________
 	<br>
+	<h2>Innskráning</h2>
 	<form method="post" action="/doinnskra" accept-charset="ISO-8859-1">
 		<label>
 			Notandanafn:

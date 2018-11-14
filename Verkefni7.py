@@ -25,9 +25,9 @@ def nyr():
         conn.commit()
         cur.close()
         conn.close()
-        return u, "hefur verið skráður <br><a href='/'>Heim</a>"
+        return u, " hefur verið skráður <br><a href='/'>Heim</a>"
     else:
-        return u, "Er frátekið notandanafn, reyndu aftur <br> <a href='/'>Heim</a>"
+        return u, " er frátekið notandanafn, reyndu aftur <br> <a href='/'>Heim</a>"
     
 @route("/doinnskra", method="POST")
 def inn():
@@ -48,6 +48,17 @@ def inn():
         cur.close()
         conn.close()
         return "haha nice try <br> <a href='/'>Heim</a>"
+
+@route("/members")
+def member():
+    conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='1610013090', passwd='mypassword', db='1610013090_verk7')
+    cur = conn.cursor()
+
+    cur.execute("SELECT * FROM 1610013090_verk7.users")
+
+    result = cur.fetchall()
+    cur.close
+    return template('members',rows=result)
     
 ##########################################
 @error(404)

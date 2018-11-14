@@ -1,0 +1,26 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	max-width: 60em;
+	margin: 0 auto;
+	background-color: #574c72;
+	color: #e0cf8b;
+}
+
+input[type="text"]{
+	margin-top: .7em;
+	margin-bottom: .7em;
+}
+table{
+	border: solid black;
+	margin: 0 auto;
+}
+
+td {
+	border: solid black;
+	padding: .5em;
+}
+h3 {
+	text-align: center;
+}
